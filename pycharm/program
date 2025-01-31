@@ -1,0 +1,48 @@
+CompanyDetails
+
+    def __init__(self):
+        self.id = 100
+        self.name = ('Ram')
+        self.country = ('IND')
+
+from abc import ABC, abstractmethod
+
+
+class Employee(ABC):
+    @abstractmethod
+    def empID(self):
+        pass
+    def empName(self):
+        print('Ram')
+
+
+class Company(Employee):
+    def empID(self):
+        print('100')
+
+c=Company()
+c.empID()
+c.empName()
+
+
+---------------
+class CompanyDetails:
+
+    def __init__(self):
+        self.id=100
+        self.name=('Ram')
+        self.country = ('IND')
+
+
+    def m1(self):
+       print (self.id)
+       print(self.name)
+       print(CompanyDetails.country)
+c=CompanyDetails()
+CompanyDetails.country='US'
+c.m1()
+
+c1=CompanyDetails()
+c1.m1()
+
+
